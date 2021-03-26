@@ -14,9 +14,13 @@
 
 <h2>My First Web Page with interactive JS CODE</h2>
 
-<h3> MAGIC 8 BALL <h3/>
+<h3> MAGIC 8 BALL <input type="button" onclick="testFunc()" value="Roll"> </h3>
+
+
+
 
 <h3 id="greet"> </h3>
+<p id="output"></p>
 
 <script> // i can write js code here, in forms of variables and using document.write and the getElementById
 
@@ -26,33 +30,42 @@ let userQuestion = "what would you like to ask of me?"
 
 function testFunc() { // i learn that i can run conditionals in functions instead of putting them into a variable i can use a function instead
 
-const randomNumber = Math.floor(Math.random() * 8);
+  const randomNumber = Math.floor(Math.random() * 8);
 
-if (randomNumber === 0 ) {
-  return "you rolled 0 , there is no hope"
-} else if (randomNumber === 1) {
-  return "you rolled 1 , my sources says no"
-} else if (randomNumber === 2) {
-  return "you rolled 2 , Do not count on it"
-} else if (randomNumber === 3) {
-  return"you rolled 3 , Outlook not so good"
-} else if (randomNumber === 4) {
-  return "you rolled 4 , cannot predict now"
-} else if (randomNumber === 5) {
-  return "you rolled 5 , Signs point to yes"
-} else if (randomNumber === 6) {
-  return "you rolled 6 , your stars are smiling to you"
-} else if (randomNumber === 7) {
-  return "you rolled 7 , It is certain"
-} else if (randomNumber === 8) {
-  return "you rolled 8 , It is decidedly so"
+  if (randomNumber === 0 ) {
+    return document.getElementById("output").innerHTML = "you rolled 0 , there is no hope"
+  } else if (randomNumber === 1) {
+    return document.getElementById("output").innerHTML = "you rolled 1 , my sources says no"
+  } else if (randomNumber === 2) {
+    return document.getElementById("output").innerHTML = "you rolled 2 , Do not count on it"
+  } else if (randomNumber === 3) {
+    return document.getElementById("output").innerHTML = "you rolled 3 , Outlook not so good"
+  } else if (randomNumber === 4) {
+    return document.getElementById("output").innerHTML = "you rolled 4 , cannot predict now"
+  } else if (randomNumber === 5) {
+    return document.getElementById("output").innerHTML = "you rolled 5 , Signs point to yes"
+  } else if (randomNumber === 6) {
+    return document.getElementById("output").innerHTML = "you rolled 6 , your stars are smiling to you"
+  } else if (randomNumber === 7) {
+    return document.getElementById("output").innerHTML = "you rolled 7 , It is certain"
+  } else if (randomNumber === 8) {
+    return document.getElementById("output").innerHTML = "you rolled 8 , It is decidedly so"
+  }
+
 }
 
-}
 
-
-document.write(testFunc()); // vague but what i know is that i can output js code directly into here.
+// testFunc(); // vague but what i know is that i can output js code directly into here.
 document.getElementById("greet").innerHTML = `hey there ${userName}, ${userQuestion}... my fortunes are as accurate as for i am 8th of the wonder there is.`
+
+// learning points, use input type button, not button
+// if things are not working as it should, test it on an online editor
+// the intention is to ensure that nothing is wrong with your own
+// editor
+// structure of code
+
+// and you can test out a working reference snippet
+// maybe use react for this?
 </script>
 
 </body>
